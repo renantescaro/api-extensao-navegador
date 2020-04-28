@@ -8,8 +8,8 @@ class PessoaCtrl{
 
         $qtdIds  = count($ids);
         $posicao = rand(0,$qtdIds-1);
-        $produto = PessoaDao::selecionarPorId(intval($ids[$posicao]['id']));
+        $pessoa = PessoaDao::selecionarPorId(intval($ids[$posicao]['id']));
 
-        return json_encode($produto, true);
+        return json_encode($pessoa, true);
     }
 }

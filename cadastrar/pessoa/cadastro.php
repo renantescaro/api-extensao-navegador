@@ -2,7 +2,7 @@
     ini_set('display_errors', 1);
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
-    require_once("../include.php");
+    require_once("../../include.php");
 
     $pessoa = null;
     if(isset($_GET['editar'])){
@@ -18,13 +18,13 @@
         }
 
         PessoaDao::salvar($id, $_POST['nome'],$_POST['cpf'],$_POST['rg'],$_POST['dataNascimento']);
-        header('location: index.php');
+        header('location: /cadastrar/pessoa');
     }
 
     if(isset($_GET['excluir']) && $_GET['excluir'] !=''){
         
         PessoaDao::deletar(intval($_GET['excluir']));
-        header('location: index.php');
+        header('location: /cadastrar/pessoa');
     }
 ?>
 

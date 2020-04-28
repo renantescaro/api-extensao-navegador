@@ -3,7 +3,7 @@
     ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
 
-    require_once("../include.php");
+    require_once("../../include.php");
     
     $pessoas = PessoaDao::selecionarTudo();
 ?>
@@ -23,7 +23,7 @@
     </div>
 
     <div style="margin-top: 20px; margin-left: 25px; margin-right: 25px">
-        <a class="btn btn-primary" href="cadastro.php">Cadastrar</a>
+        <a class="btn btn-primary" href="pessoa/cadastro.php">Cadastrar</a>
         <table class="table table-bordered table-striped">
             <thead>
                 <tr>
@@ -43,8 +43,8 @@
                         <td><?=$pessoa['rg']?></td>
                         <td><?=$pessoa['data_nascimento']?></td>
                         <td>
-                            <a href="cadastro.php?editar=<?=$pessoa['id']?>" class="btn btn-warning">Editar</a>
-                            <a href="cadastro.php?excluir=<?=$pessoa['id']?>" class="btn btn-danger">Excluir</a>
+                            <a href="pessoa/cadastro.php?editar=<?=$pessoa['id']?>" class="btn btn-warning">Editar</a>
+                            <a href="pessoa/cadastro.php?excluir=<?=$pessoa['id']?>" class="btn btn-danger">Excluir</a>
                         </td>
                     </tr>
                 <?php } ?>
